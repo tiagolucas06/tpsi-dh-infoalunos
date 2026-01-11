@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horários | InfoAlunos</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="header">
+        <img width="200px" src="Uni Madeira.png" alt="Universidade da Madeira">
+        <div class="logo">InfoAlunos</div>
+    </header>
+
+    <main class="layout">
+
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="Pagamentos.html">Pagamentos</a></li>
+                <li><a href="Matriculas.html">Matrículas / Inscrições</a></li>
+                <li><a href="Requerimentos.html">Requerimentos</a></li>
+                <li><a href="Pautas.html">Pautas</a></li>
+                <li class="active">Horários</li>
+                <li><a href="Avisos.html">Avisos</a></li>
+            </ul>
+        </aside>
+
+        <section class="content">
+            <h1>Horário Semanal</h1>
+
+            <form class="card" aria-label="Pesquisar horário">
+                <h2>Filtros</h2>
+                <label>
+                    Curso
+                    <select>
+                        <option>TSPSI</option>
+                    </select>
+                </label>
+                <label>
+                    Semestre
+                    <select>
+                        <option>1º Semestre</option>
+                        <option>2º Semestre</option>
+                    </select>
+                </label>
+            </form>
+
+            <div class="card">
+                <h2>Horário</h2>
+                <table aria-label="Horário semanal do aluno">
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Segunda</th>
+                            <th>Terça</th>
+                            <th>Quarta</th>
+                            <th>Quinta</th>
+                            <th>Sexta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:00 - 9:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Introdução à programação</td>
+                        </tr>
+                        <tr>
+                            <td>09:00 - 10:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Sistemas operativos e redes</td>
+                            <td>Introdução à programação</td>
+                        </tr>
+                        <tr>
+                            <td>10:00 - 11:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Sistemas operativos e redes</td>
+                            <td>Introdução à programação</td>
+                        </tr>
+                        <tr>
+                            <td>11:00 - 12:00</td>
+                            <td></td>
+                            <td></td>
+                            <td>Técnicas de expressão do Português</td>
+                            <td></td>
+                            <td>Introdução à programação</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 - 13:00</td>
+                            <td></td>
+                            <td></td>
+                            <td>Técnicas de expressão do Português</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>13:00 - 14:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>14:00 - 15:00</td>
+                            <td></td>
+                            <td></td>
+                            <td>Sistemas operativos e redes</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>15:00 - 16:00</td>
+                            <td></td>
+                            <td></td>
+                            <td>Sistemas operativos e redes</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>16:00 - 17:00</td>
+                            <td></td>
+                            <td></td>
+                            <td>Design Hipermédia</td>
+                            <td>Matemática</td>
+                            <td>Matemática</td>
+                        </tr>
+                        <tr>
+                            <td>17:00 - 18:00</td>
+                            <td>Design Hipermédia</td>
+                            <td></td>
+                            <td></td>
+                            <td>Matemática</td>
+                            <td>Matemática</td>
+                        </tr>
+                        <tr>
+                            <td>18:00 - 19:00</td>
+                            <td>Desgin Hipermédia</td>
+                            <td></td>
+                            <td></td>
+                            <td>Técnicas de expressão do Português</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>19:00 - 20:00</td>
+                            <td>Design Hipermédia</td>
+                            <td></td>
+                            <td></td>
+                            <td>Técnicas de expressão do Português</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>20:00 - 21:00</td>
+                            <td>Design Hipermédia</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <dialog id="aulaDialog">
+                <h2>Detalhe da Aula</h2>
+                <p><strong>Unidade Curricular:</strong> Design Hipermédia</p>
+                <p><strong>Docente:</strong> Marco Miguel Olival Olim</p>
+                <p><strong>Sala:</strong> B2.01</p>
+                <button onclick="this.closest('dialog').close()">Fechar</button>
+            </dialog>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Universidade da Madeira – Protótipo Académico</p>
+    </footer>
+
+</body>
+
+</html>

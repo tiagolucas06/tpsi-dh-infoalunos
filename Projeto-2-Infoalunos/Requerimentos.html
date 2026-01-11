@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Requerimentos | InfoAlunos</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="header">
+        <img width="200px" src="Uni Madeira.png" alt="Universidade da Madeira">
+        <div class="logo">InfoAlunos</div>
+    </header>
+
+    <main class="layout">
+
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="Pagamentos.html">Pagamentos</a></li>
+                <li><a href="Matriculas.html">Matrículas / Inscrições</a></li>
+                <li class="active">Requerimentos</li>
+                <li><a href="Pautas.html">Pautas</a></li>
+                <li><a href="Horários.html">Horários</a></li>
+                <li><a href="Avisos.html">Avisos</a></li>
+            </ul>
+        </aside>
+
+        <section class="content">
+
+            <div class="cards">
+                <article class="card">
+                    <h2>Pesquisar Requerimentos</h2>
+                    <form>
+                        <label>
+                            Tipo
+                            <select>
+                                <option>Todos</option>
+                                <option>Académico</option>
+                                <option>Financeiro</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Estado
+                            <select>
+                                <option>Todos</option>
+                                <option>Submetido</option>
+                                <option>Em análise</option>
+                                <option>Concluído</option>
+                            </select>
+                        </label>
+                    </form>
+                </article>
+
+                <article class="card">
+                    <h2>Novo Requerimento</h2>
+                    <p>Submeter um novo pedido académico ou administrativo.</p>
+                    <button onclick="document.getElementById('novoReq').showModal()">
+                        Submeter Novo
+                    </button>
+                </article>
+            </div>
+
+            <div class="card">
+                <h2>Lista de Requerimentos</h2>
+
+                <table aria-label="Lista de requerimentos do aluno">
+                    <thead>
+                        <tr>
+                            <th>Nº</th>
+                            <th>Tipo</th>
+                            <th>Data</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="document.getElementById('detalheReq').showModal()">
+                            <td>REQ-001</td>
+                            <td>Declaração</td>
+                            <td>10/11/2025</td>
+                            <td>Concluído</td>
+                        </tr>
+                        <tr>
+                            <td>REQ-002</td>
+                            <td>Anulação de Matrícula</td>
+                            <td>02/12/2025</td>
+                            <td>Em análise</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <dialog id="detalheReq">
+                <h2>Detalhe do Requerimento</h2>
+                <p><strong>Tipo:</strong> Declaração</p>
+                <p><strong>Estado:</strong> Concluído</p>
+                <p><strong>Descrição:</strong> Pedido de declaração de matrícula.</p>
+                <button onclick="this.closest('dialog').close()">Fechar</button>
+            </dialog>
+
+            <dialog id="novoReq">
+                <h2>Novo Requerimento</h2>
+                <form>
+                    <label>
+                        Tipo de Requerimento
+                        <select required>
+                            <option value="">Selecionar</option>
+                            <option>Declaração</option>
+                            <option>Anulação de Matrícula</option>
+                            <option>Reclamação de Nota</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Descrição
+                        <textarea rows="4" required></textarea>
+                    </label>
+
+                    <button type="submit">Submeter</button>
+                    <button type="button" onclick="this.closest('dialog').close()">Cancelar</button>
+                </form>
+            </dialog>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Universidade da Madeira – Protótipo Académico</p>
+    </footer>
+
+</body>
+
+</html>

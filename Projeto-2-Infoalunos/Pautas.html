@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pautas | InfoAlunos</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <img width="200px" src="Uni Madeira.png" alt="Universidade da Madeira">
+        <div class="logo">InfoAlunos</div>
+    </header>
+
+    <main class="layout">
+
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="Pagamentos.html">Pagamentos</a></li>
+                <li><a href="Matriculas.html">Matrículas / Inscrições</a></li>
+                <li><a href="Requerimentos.html">Requerimentos</a></li>
+                <li class="active">Pautas</li>
+                <li><a href="Horários.html">Horários</a></li>
+                <li><a href="Avisos.html">Avisos</a></li>
+            </ul>
+        </aside>
+
+        <section class="content">
+            <h1>Pautas</h1>
+
+            <form class="card" aria-label="Pesquisar pautas">
+                <h2>Pesquisar</h2>
+
+                <label>
+                    Ano Letivo
+                    <select>
+                        <option>2025/2026</option>
+                        <option>2024/2025</option>
+                    </select>
+                </label>
+
+                <label>
+                    Unidade Curricular
+                    <select>
+                        <option>Todas</option>
+                        <option>Design Hipermédia</option>
+                        <option>Programação Web</option>
+                    </select>
+                </label>
+            </form>
+
+            <div class="card">
+                <h2>Lista de Pautas</h2>
+
+                <table aria-label="Lista de pautas">
+                    <thead>
+                        <tr>
+                            <th>UC</th>
+                            <th>Época</th>
+                            <th>Nota</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="document.getElementById('detalhePauta').showModal()">
+                            <td>Design Hipermédia</td>
+                            <td>Normal</td>
+                            <td>-</td>
+                            <td>Por divulgar</td>
+                        </tr>
+                        <tr>
+                            <td>Sistemas operativos e redes</td>
+                            <td>Normal</td>
+                            <td>-</td>
+                            <td>Por divulgar</td>
+                        </tr>
+                        <tr>
+                            <td>Técnicas de expressão do Português</td>
+                            <td>Normal</td>
+                            <td>-</td>
+                            <td>Por divulgar</td>
+                        </tr>
+                        <tr>
+                            <td>Introdução à Programação</td>
+                            <td>Normal</td>
+                            <td>-</td>
+                            <td>Por divulgar</td>
+                        </tr>
+                        <tr>
+                            <td>Matemática</td>
+                            <td>Normal</td>
+                            <td>-</td>
+                            <td>Por divulgar</td>
+                    </tbody>
+                </table>
+            </div>
+
+            <dialog id="detalhePauta">
+                <h2>Detalhe da Pauta</h2>
+                <p><strong>Unidade Curricular:</strong> Design Hipermédia</p>
+                <p><strong>Época:</strong> Normal</p>
+                <p><strong>Nota:</strong> 15 valores</p>
+
+                <h3>Alunos Associados</h3>
+                <ul>
+                    <li>Aluno A – 15</li>
+                    <li>Aluno B – 14</li>
+                    <li>Aluno C – 16</li>
+                </ul>
+
+                <button onclick="this.closest('dialog').close()">Fechar</button>
+            </dialog>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Universidade da Madeira – Protótipo Académico</p>
+    </footer>
+
+</body>
+
+</html>

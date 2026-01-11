@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avisos | InfoAlunos</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <img width="200px" src="Uni Madeira.png" alt="Universidade da Madeira">
+        <div class="logo">InfoAlunos</div>
+    </header>
+
+    <main class="layout">
+
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="Pagamentos.html">Pagamentos</a></li>
+                <li><a href="Matriculas.html">Matrículas / Inscrições</a></li>
+                <li><a href="Requerimentos.html">Requerimentos</a></li>
+                <li><a href="Pautas.html">Pautas</a></li>
+                <li><a href="Horários.html">Horários</a></li>
+                <li class="active">Avisos</li>
+            </ul>
+        </aside>
+
+        <section class="content">
+            <h1>Avisos</h1>
+
+            <form class="card" aria-label="Pesquisar avisos">
+                <h2>Pesquisar</h2>
+                <label>
+                    Categoria
+                    <select>
+                        <option>Todas</option>
+                        <option>Académico</option>
+                        <option>Financeiro</option>
+                        <option>Institucional</option>
+                    </select>
+                </label>
+
+                <label>
+                    Data
+                    <input type="date" />
+                </label>
+            </form>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h2>Interrupção de Serviços Online</h2>
+                    <p><strong>Categoria:</strong> Institucional</p>
+                    <p><strong>Data:</strong> 05/01/2026</p>
+                    <p>Os serviços online estarão indisponíveis no dia 7 de janeiro entre as 22h e as 24h.</p>
+                    <details>
+                        <summary>Ver mais</summary>
+                        <p>Esta interrupção deve-se a trabalhos de manutenção programados nos servidores da instituição.
+                        </p>
+                    </details>
+                </article>
+
+                <article class="card">
+                    <h2>Prazo de Pagamento de Propinas</h2>
+                    <p><strong>Categoria:</strong> Financeiro</p>
+                    <p><strong>Data:</strong> 02/01/2026</p>
+                    <p>O prazo para pagamento da propina referente ao mês de janeiro termina a 31/01/2026.</p>
+                </article>
+
+                <article class="card">
+                    <h2>Abertura de Inquéritos Pedagógicos</h2>
+                    <p><strong>Categoria:</strong> Académico</p>
+                    <p><strong>Data:</strong> 20/12/2025</p>
+                    <p>Encontra-se disponível o preenchimento dos inquéritos pedagógicos do semestre.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Universidade da Madeira – Protótipo Académico</p>
+    </footer>
+
+</body>
+
+</html>

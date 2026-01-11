@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrículas e Inscrições | InfoAlunos</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <img width="200px" src="Uni Madeira.png" alt="Universidade da Madeira">
+        <div class="logo">InfoAlunos</div>
+    </header>
+
+    <main class="layout">
+
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pagamentos.html">Pagamentos</a></li>
+                <li class="active">Matrículas / Inscrições</li>
+                <li><a href="requerimentos.html">Requerimentos</a></li>
+                <li><a href="Pautas.html">Pautas</a></li>
+                <li><a href="Horários.html">Horários</a></li>
+                <li><a href="Avisos.html">Avisos</a></li>
+        </aside>
+
+        <section class="content">
+            <h1>Matrículas e Inscrições</h1>
+
+            <p>Gestão das matrículas e inscrições do aluno.</p>
+
+            <div class="cards">
+                <article class="card">
+                    <h2>1. Seleção do Curso</h2>
+                    <p>Escolha o curso para o qual pretende efetuar a matrícula.</p>
+                    <select>
+                        <option>TSPSI – Tecnologias e Programação de Sistemas de Informação</option>
+                    </select>
+                </article>
+
+                <article class="card">
+                    <h2>2. Ano Letivo</h2>
+                    <p>Selecione o ano letivo da inscrição.</p>
+                    <select>
+                        <option>2025/2026</option>
+                        <option>2024/2025</option>
+                    </select>
+                </article>
+
+                <article class="card">
+                    <h2>3. Unidades Curriculares</h2>
+                    <p>Selecione as unidades curriculares a inscrever.</p>
+                    <label><input type="checkbox" /> Design Hipermédia</label><br/>
+                    <label><input type="checkbox" /> Matemática</label><br/>
+                    <label><input type="checkbox" /> Técnicas de expressão do Português</label><br/>
+                    <label><input type="checkbox" /> Introdução à Programação</label><br/>
+                    <label><input type="checkbox" /> Sistemas operativos e redes</label>
+                </article>
+            </div>
+
+            <div class="card">
+                <h2>Resumo da Inscrição</h2>
+                <ul>
+                    <li><strong>Curso:</strong> TSPSI</li>
+                    <li><strong>Ano Letivo:</strong> 2025/2026</li>
+                    <li><strong>Unidades Curriculares:</strong> 5 selecionadas</li>
+                </ul>
+                <button onclick="document.getElementById('confirmarMatricula').showModal()">Confirmar Matrícula</button>
+            </div>
+
+            <dialog id="confirmarMatricula">
+                <h2>Confirmar Matrícula</h2>
+                <p>Pretende confirmar a matrícula com os dados selecionados?</p>
+                <button>Confirmar</button>
+                <button onclick="this.closest('dialog').close()">Cancelar</button>
+            </dialog>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Universidade da Madeira – Protótipo Académico</p>
+    </footer>
+
+</body>
+
+</html>

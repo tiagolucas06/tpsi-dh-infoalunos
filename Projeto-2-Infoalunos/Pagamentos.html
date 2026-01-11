@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagamentos | InfoAlunos</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <img width="200px" src="Uni Madeira.png" alt="Universidade da Madeira">
+        <div class="logo">InfoAlunos</div>
+    </header>
+
+    <main class="layout">
+
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li class="active">Pagamentos</li>
+                <li><a href="Matriculas.html">Matrículas / Inscrições</a></li>
+                <li><a href="Requerimentos.html">Requerimentos</a></li>
+                <li><a href="Pautas.html">Pautas</a></li>
+                <li><a href="Horários.html">Horários</a></li>
+                <li><a href="Avisos.html">Avisos</a></li>
+            </ul>
+        </aside>
+
+        <section class="content">
+            <h1>Pagamentos</h1>
+
+            <form class="card" aria-label="Pesquisar pagamentos">
+                <h2>Pesquisar</h2>
+                <label>
+                    Ano Letivo
+                    <select>
+                        <option>2025/2026</option>
+                        <option>2024/2025</option>
+                    </select>
+                </label>
+
+                <label>
+                    Estado
+                    <select>
+                        <option>Todos</option>
+                        <option>Pendente</option>
+                        <option>Pago</option>
+                    </select>
+                </label>
+            </form>
+
+            <div class="card">
+                <h2>Lista de Pagamentos</h2>
+
+                <table aria-label="Lista de pagamentos do aluno">
+                    <thead>
+                        <tr>
+                            <th>Referência</th>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Data Limite</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15675</td>
+                            <td>Propina – Junho</td>
+                            <td>€70</td>
+                            <td>30/06/2026</td>
+                            <td>Pendente</td>
+                        </tr>
+                        <tr>
+                            <td>15674</td>
+                            <td>Propina – Maio</td>
+                            <td>€70</td>
+                            <td>31/05/2026</td>
+                            <td>Pendente</td>
+                        </tr>
+                        <tr>
+                            <td>15673</td>
+                            <td>Propina – Abril</td>
+                            <td>€70</td>
+                            <td>30/04/2026</td>
+                            <td>Pendente</td>
+                        </tr>
+                        <tr>
+                            <td>15672</td>
+                            <td>Propina – Março</td>
+                            <td>€70</td>
+                            <td>31/03/2026</td>
+                            <td>Pendente</td>
+                        </tr>
+                        <tr>
+                            <td>15671</td>
+                            <td>Propina – Fevereiro</td>
+                            <td>€70</td>
+                            <td>28/02/2026</td>
+                            <td>Pendente</td>
+                        </tr>
+                        <tr>
+                            <td>15670</td>
+                            <td>Propina – Janeiro</td>
+                            <td>€70</td>
+                            <td>31/01/2026</td>
+                            <td>Pendente</td>
+                        </tr>
+                            <tr>
+                            <td>15669</td>
+                            <td>Propina – Dezembro</td>
+                            <td>€70</td>
+                            <td>31/12/2025</td>
+                            <td>Pago</td>
+                        </tr>
+                            <tr>
+                            <td>15668</td>
+                            <td>Propina – Novembro</td>
+                            <td>€70</td>
+                            <td>30/11/2025</td>
+                            <td>Pago</td>
+                        </tr>
+                            <tr>
+                            <td>15667</td>
+                            <td>Propina – Outubro</td>
+                            <td>€70</td>
+                            <td>31/10/2025</td>
+                            <td>Pago</td>
+                        </tr>
+                            <tr>
+                            <td>15666</td>
+                            <td>Propina – Setembro</td>
+                            <td>€70</td>
+                            <td>30/09/2025</td>
+                            <td>Pago</td>
+                        </tr>
+                        <tr>
+                            <td>15665</td>
+                            <td>Seguro Escolar</td>
+                            <td>€20,00</td>
+                            <td>15/10/2025</td>
+                            <td>Pago</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <dialog id="pagamentoDialog">
+                <h2>Detalhe do Pagamento</h2>
+                <p><strong>Descrição:</strong> Propina – Janeiro</p>
+                <p><strong>Valor:</strong> €120,00</p>
+                <p><strong>Entidade:</strong> 12345</p>
+                <p><strong>Referência:</strong> 123 456 789</p>
+                <button onclick="this.closest('dialog').close()">Fechar</button>
+            </dialog>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Universidade da Madeira – Protótipo Académico</p>
+    </footer>
+
+</body>
+
+</html>
